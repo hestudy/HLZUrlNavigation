@@ -18,6 +18,7 @@ class Urls(models.Model):
     image = models.ImageField(upload_to='image',verbose_name='图像')
     href_class = models.ForeignKey("UrlsClass",on_delete=models.CASCADE)
     date = models.DateField(auto_now_add=True,verbose_name='录入时间')
+    source = models.TextField(verbose_name='来源',default='hlzurlbavigation')
     def __str__(self):
         return self.title
     def __unicode__(self):

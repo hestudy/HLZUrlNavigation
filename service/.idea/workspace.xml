@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0196397a-1c9e-410f-aaa7-9843c2cbec48" name="Default Changelist" comment="" />
+    <list default="true" id="0196397a-1c9e-410f-aaa7-9843c2cbec48" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/海报1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/海报1_1r7kXWx.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/海报1_TkEbBT9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/海报2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/海报2_0vQQqwl.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/海报3.png" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,7 +27,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1WSuJTyRV34AYtSP1elk4J18ELM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -25,6 +39,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
@@ -77,6 +92,7 @@
       <option name="presentableId" value="Default" />
       <updated>1579155247334</updated>
       <workItem from="1579155261464" duration="8236000" />
+      <workItem from="1579533348780" duration="3106000" />
     </task>
     <servers />
   </component>
@@ -88,13 +104,30 @@
       <screen x="0" y="0" width="1440" height="930" />
     </state>
     <state x="175" y="120" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.930@0.0.1440.930" timestamp="1579155685887" />
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom" timestamp="1579537594748">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1579537594748" />
+    <state width="1877" height="285" key="GridCell.Tab.0.center" timestamp="1579537594748">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="285" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1579537594748" />
+    <state width="1877" height="285" key="GridCell.Tab.0.left" timestamp="1579537594747">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="285" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1579537594747" />
+    <state width="1877" height="285" key="GridCell.Tab.0.right" timestamp="1579537594748">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1579537594748" />
     <state x="395" y="137" key="SettingsEditor" timestamp="1579155341779">
       <screen x="0" y="0" width="1440" height="930" />
     </state>
     <state x="395" y="137" key="SettingsEditor/0.0.1440.930@0.0.1440.930" timestamp="1579155341779" />
-    <state x="414" y="226" key="com.intellij.ide.util.TipDialog" timestamp="1579155264902">
-      <screen x="0" y="0" width="1440" height="930" />
+    <state x="552" y="255" key="com.intellij.ide.util.TipDialog" timestamp="1579533353355">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="414" y="226" key="com.intellij.ide.util.TipDialog/0.0.1440.930@0.0.1440.930" timestamp="1579155264902" />
+    <state x="552" y="255" key="com.intellij.ide.util.TipDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1579533353355" />
   </component>
 </project>
