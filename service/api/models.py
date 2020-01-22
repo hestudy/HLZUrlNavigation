@@ -50,6 +50,9 @@ class PrivateResources(models.Model):
     href_class = models.ForeignKey("PrivateResourcesClass", on_delete=models.CASCADE,verbose_name='所属分类')
     date = models.DateField(auto_now_add=True, verbose_name='录入时间')
     user = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='所属用户')
+    share = models.BooleanField(default=False,verbose_name='是否分享')
+    share_date = models.DateField(auto_now=True,verbose_name='分享日期')
+    share_hot = models.BigIntegerField(default=0,verbose_name='分享热度')
     def __str__(self):
         return self.title
     def __unicode__(self):

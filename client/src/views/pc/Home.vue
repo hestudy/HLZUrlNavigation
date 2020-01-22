@@ -22,7 +22,9 @@
             </Menu>
         </Header>
         <Content style="background-color: white;">
-            <router-view></router-view>
+            <transition name="fade">
+                <router-view></router-view>
+            </transition>
         </Content>
         <Footer style="background-color: white;text-align: center;">
             <h5>202001@<a>怎么学都学不会的何同学</a></h5>

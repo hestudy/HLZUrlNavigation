@@ -1,5 +1,7 @@
 <template>
-  <router-view/>
+  <transition name="fade">
+    <router-view/>
+  </transition>
 </template>
 
 <style>

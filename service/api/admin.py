@@ -21,7 +21,7 @@ class PrivateResourcesClassAdmin(admin.ModelAdmin):
 
 @admin.register(PrivateResources)
 class PrivateResourcesAdmin(admin.ModelAdmin):
-    list_display = ['title','image','subtitle','href','href_class','user','date']
+    list_display = ['title','image','subtitle','href','href_class','user','date','share','share_date','share_hot']
     list_filter = ['user']
     search_fields = ['title', 'subtitle']
     list_per_page = 20

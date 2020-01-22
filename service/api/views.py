@@ -1,7 +1,7 @@
 from django.http import HttpResponse,JsonResponse
 from .models import UrlsClass,Urls,PrivateResourcesClass,PrivateResources
 from service import settings
-import os
+import os,time
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.models import User
 
@@ -104,6 +104,20 @@ def privateresources(request):
         data = list(PrivateResources.objects.filter(href_class=class_id).values())
         response['state'] = 'success'
         response['data'] = data
+    else:
+        response['state'] = 'err'
+    return JsonResponse(response)
+
+def changeshare(request):
+    response = {}
+    if (request.user.is_authenticated):
+        urlsid = request.POST['id']
+        share = request.POST['share']
+        data = PrivateResources.objects.get(id=urlsid)
+        data.share = bool(share)
+        data.share_date = time.strftime("%Y-%m-%d", time.localtime())
+        data.save()
+        response['state'] = 'success'
     else:
         response['state'] = 'err'
     return JsonResponse(response)

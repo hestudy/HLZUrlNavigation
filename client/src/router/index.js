@@ -15,6 +15,32 @@ const routes = [
     component: () => import('../views/pc/UpdatePassword')
   },
   {
+    path: '/ResourcesManage',
+    component: () => import('../views/pc/ResourcesManage'),
+    children:[
+      {
+        path: '/',
+        name: 'ResourcesManage-pc',
+        component: () => import('../views/pc/children/ResourcesManageOverView')
+      },
+      {
+        path: '/ResourcesManageAddView',
+        name: 'ResourcesManageAddView-pc',
+        component: () => import('../views/pc/children/ResourcesManageAddView')
+      },
+      {
+        path: '/ResourcesManageUpdateView',
+        name: 'ResourcesManageUpdateView-pc',
+        component: () => import('../views/pc/children/ResourcesManageUpdateView')
+      },
+      {
+        path: '/ResourcesManageDeleteView',
+        name: 'ResourcesManageDeleteView-pc',
+        component: () => import('../views/pc/children/ResourcesManageDeleteView')
+      }
+    ]
+  },
+  {
     path: '/pc',
     component: () => import('../views/pc/Home'),
     children:[

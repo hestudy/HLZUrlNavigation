@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import index,urls,image,userlogin,userlogout,userresign,updatepassword,modifypassword,privateresourcesclass,privateresources
+from .views import index,urls,image,userlogin,userlogout,userresign,updatepassword,modifypassword,privateresourcesclass,privateresources,changeshare
 
 urlpatterns = [
     path('index/',index),
@@ -11,5 +11,6 @@ urlpatterns = [
     path('updatepassword/',updatepassword),
     path('modifypassword/',modifypassword),
     path('privateresourcesclass/',privateresourcesclass),
-    path('privateresources/',privateresources)
+    path('privateresources/',privateresources),
+    path('changeshare/',changeshare)
 ]
