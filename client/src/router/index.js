@@ -15,6 +15,11 @@ const routes = [
     component: () => import('../views/pc/UpdatePassword')
   },
   {
+    path:'/EditContent',
+    name:'EditContent-pc',
+    component:()=>import('../views/pc/EditContent')
+  },
+  {
     path: '/ResourcesManage',
     component: () => import('../views/pc/ResourcesManage'),
     children:[

@@ -178,7 +178,7 @@
                 }
                 httpaxios.post(this,url,postdata,response=>{
                     if(response.data.state=='err'){
-                        this.$Message.error('改变失败，身份校验不通过')
+                        this.$Message.error('改变失败，身份校验不通过或存在同标题的分享资源')
                     }else{
                         this.$Message.success('改变成功')
                     }
@@ -294,10 +294,7 @@
             if (user != '' && user != null && user != undefined) {
                 this.havelogin = true
                 let url = this.$store.state.serviceurl + '/privateresourcesclass/'
-                let postdata = {
-                    user: localStorage.getItem('user')
-                }
-                httpaxios.post(this, url, postdata, response => {
+                httpaxios.get(this, url, response => {
                     if (response.data.state == 'err') {
                         this.$Modal.error({
                             title: '错误提示',

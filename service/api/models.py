@@ -60,3 +60,20 @@ class PrivateResources(models.Model):
     class Meta:
         verbose_name = "私人资源"
         verbose_name_plural = "私人资源数据库"
+
+class About(models.Model):
+    content = models.TextField(verbose_name='文章内容')
+    date = models.DateField(auto_now=True,verbose_name='发布时间')
+    def __str__(self):
+        return str(self.date)
+    def __unicode__(self):
+        return str(self.date)
+    class Meta:
+        verbose_name = "关于本站"
+        verbose_name_plural = "关于本站数据库"
+
+class WeChat(models.Model):
+    image = models.ImageField(upload_to='wechat',verbose_name='二维码')
+    class Meta:
+        verbose_name = "微信二维码"
+        verbose_name_plural = "微信二维码数据库"

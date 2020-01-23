@@ -7,9 +7,13 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "@toast-ui/vue-editor": "^1.1.1",
     "axios": "^0.19.1",
     "core-js": "^3.4.4",
+    "echarts": "^4.6.0",
     "qs": "^6.9.1",
+    "v-charts": "^1.19.0",
+    "vant": "^2.4.3",
     "view-design": "^4.1.1",
     "vue": "^2.6.10",
     "vue-cookie": "^1.1.4",

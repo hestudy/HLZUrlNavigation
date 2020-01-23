@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import UrlsClass,Urls,PrivateResourcesClass,PrivateResources
+from .models import UrlsClass,Urls,PrivateResourcesClass,PrivateResources,About,WeChat
 
 # Register your models here.
 @admin.register(UrlsClass)
@@ -25,3 +25,11 @@ class PrivateResourcesAdmin(admin.ModelAdmin):
     list_filter = ['user']
     search_fields = ['title', 'subtitle']
     list_per_page = 20
+
+@admin.register(About)
+class AboutAdmin(admin.ModelAdmin):
+    list_display = ['date']
+
+@admin.register(WeChat)
+class WeChatAdmin(admin.ModelAdmin):
+    list_display = ['image']
