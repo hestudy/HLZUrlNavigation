@@ -27,5 +27,7 @@ urlpatterns = [
     path('IsSuperUser/',api.IsSuperUser),
     path('ReadAbout/',api.ReadAbout),
     path('UpdateAbout/',api.UpdateAbout),
-    path('WeChatImage/',api.WeChatImage)
+    path('WeChatImage/',api.WeChatImage),
+    path('CommentsPush/',api.CommentsPush),
+    path('CommentsData/',api.CommentsData)
 ]

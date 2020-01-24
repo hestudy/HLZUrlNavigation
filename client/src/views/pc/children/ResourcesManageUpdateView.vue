@@ -66,7 +66,7 @@
                                                 <Input v-model="itemdatas.title" placeholder="输入标题"></Input>
                                             </FormItem>
                                             <FormItem label="描述">
-                                                <Input v-model="itemdatas.subtitle" placeholder="输入描述"></Input>
+                                                <Input v-model="itemdatas.subtitle" type="textarea" placeholder="输入描述"></Input>
                                             </FormItem>
                                             <FormItem label="链接">
                                                 <Input v-model="itemdatas.href" placeholder="输入链接"></Input>

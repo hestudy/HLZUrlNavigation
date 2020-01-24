@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'i2h^eej816*#t^7e5mogzo0u@=(=&j^41(-e$ryay-lzc-bjga'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -112,10 +112,9 @@ WSGI_APPLICATION = 'service.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',  # 或者使用 mysql.connector.django
-        'NAME': 'hlzurlnavigation',
-        'USER': 'hlzurlnavigation',
-        'PASSWORD': 'hlzurlnavigation',
-        'HOST':'localhost',
+        'NAME': 'YouDataBase', #更改为你的数据库
+        'PASSWORD': 'YouPassWord', #更改为你的数据库用户
+        'HOST':'localhost', #更改为你的数据库密码
         'PORT':'3306',
     }
 }
@@ -159,3 +158,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 SESSION_COOKIE_SAMESITE = False
+STATIC_ROOT = os.path.join(BASE_DIR,'static/')

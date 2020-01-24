@@ -35,7 +35,7 @@
                             <Input v-model="PrivateResourcesFrom.title" placeholder="新增资源标题"></Input>
                         </FormItem>
                         <FormItem label="描述">
-                            <Input v-model="PrivateResourcesFrom.subtitle" placeholder="新增资源描述"></Input>
+                            <Input v-model="PrivateResourcesFrom.subtitle" type="textarea" placeholder="新增资源描述"></Input>
                         </FormItem>
                         <FormItem label="链接">
                             <Input v-model="PrivateResourcesFrom.href" placeholder="新增资源链接"></Input>

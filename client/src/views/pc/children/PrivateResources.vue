@@ -85,32 +85,34 @@
                          style="width: 100%;height: 100%;display: flex;align-items: center;justify-content: center;">
                         <h3>欢迎来到私人资源库，这里是只属于你自己的资源存储</h3>
                     </div>
-                    <div style="width: 100%;height: 100%;display: flex;flex-wrap: wrap;align-content: flex-start;overflow: auto;max-height: 75vh;" v-if="urlsdata.length!=0">
-                        <a style="margin: 10px;" class="urls" v-for="(item,index) in urlsdata" :key="index"
-                           @click="onurl(item)">
-                            <div style="width: 400px;height: 200px;background-color: white;border-radius: 10px;display: flex;">
-                                <div style="height: 100%;flex: 1;padding: 3px;display: flex;align-items: center;justify-content: center;">
-                                    <img :src="getimagesrc(item)" style="width:100%;height:auto;border-radius: 50%;">
+                    <div v-else style="width: 100%;height: 100%;">
+                        <div style="width: 100%;height: 100%;display: flex;flex-wrap: wrap;align-content: flex-start;overflow: auto;max-height: 75vh;" v-if="urlsdata.length!=0">
+                            <a style="margin: 10px;" class="urls" v-for="(item,index) in urlsdata" :key="index"
+                               @click="onurl(item)">
+                                <div style="width: 400px;height: 200px;background-color: white;border-radius: 10px;display: flex;overflow: hidden">
+                                    <div style="height: 100%;flex: 1;padding: 3px;display: flex;align-items: center;justify-content: center;">
+                                        <img :src="getimagesrc(item)" style="width:100%;height:auto;border-radius: 50%;">
+                                    </div>
+                                    <div style="height: 100%;flex: 2">
+                                        <Layout style="width: 100%;height: 100%;">
+                                            <Header style="background-color: white">
+                                                <h3>{{item.title}}</h3>
+                                            </Header>
+                                            <Content style="background-color: white;padding: 10px;overflow: auto;max-height: 10vh">
+                                                <h5>{{item.subtitle}}</h5>
+                                            </Content>
+                                            <Footer style="background-color: white">
+                                                <h4>创建日期：{{item.date}}</h4>
+                                            </Footer>
+                                        </Layout>
+                                    </div>
                                 </div>
-                                <div style="height: 100%;flex: 2">
-                                    <Layout style="width: 100%;height: 100%;">
-                                        <Header style="background-color: white">
-                                            <h3>{{item.title}}</h3>
-                                        </Header>
-                                        <Content style="background-color: white;padding: 10px;">
-                                            <h5>{{item.subtitle}}</h5>
-                                        </Content>
-                                        <Footer style="background-color: white">
-                                            <h4>创建日期：{{item.date}}</h4>
-                                        </Footer>
-                                    </Layout>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div v-else
-                         style="width: 100%;height: 100%;display: flex;align-items: center;justify-content: center;">
-                        <h3>该分类暂无数据</h3>
+                            </a>
+                        </div>
+                        <div v-else
+                             style="width: 100%;height: 100%;display: flex;align-items: center;justify-content: center;">
+                            <h3>该分类暂无数据</h3>
+                        </div>
                     </div>
                 </Content>
             </Layout>

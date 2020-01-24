@@ -77,3 +77,15 @@ class WeChat(models.Model):
     class Meta:
         verbose_name = "微信二维码"
         verbose_name_plural = "微信二维码数据库"
+
+class Comments(models.Model):
+    content = models.TextField(verbose_name='评论内容')
+    user = models.ForeignKey(User,on_delete=models.CASCADE,verbose_name='评论用户')
+    date = models.DateField(auto_now_add=True,verbose_name='评论时间')
+    def __str__(self):
+        return self.content
+    def __unicode__(self):
+        return self.content
+    class Meta:
+        verbose_name = "用户评论"
+        verbose_name_plural = "用户评论数据库"

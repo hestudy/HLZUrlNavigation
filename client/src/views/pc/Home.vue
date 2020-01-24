@@ -21,7 +21,7 @@
                 </MenuItem>
             </Menu>
         </Header>
-        <Content style="background-color: white;">
+        <Content style="background-color: white;overflow: hidden">
             <transition name="fade">
                 <router-view></router-view>
             </transition>

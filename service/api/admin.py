@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import UrlsClass,Urls,PrivateResourcesClass,PrivateResources,About,WeChat
+from .models import UrlsClass,Urls,PrivateResourcesClass,PrivateResources,About,WeChat,Comments
 
 # Register your models here.
 @admin.register(UrlsClass)
@@ -33,3 +33,10 @@ class AboutAdmin(admin.ModelAdmin):
 @admin.register(WeChat)
 class WeChatAdmin(admin.ModelAdmin):
     list_display = ['image']
+
+@admin.register(Comments)
+class CommentsAdmin(admin.ModelAdmin):
+    list_display = ['content','user','date']
+    list_per_page = 20
+    list_filter = ['user']
+    search_fields = ['content']

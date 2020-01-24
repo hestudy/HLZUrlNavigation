@@ -12,7 +12,7 @@
                                 <Header style="background-color: white;text-align: center;">
                                     <h3>{{item.title}}</h3>
                                 </Header>
-                                <Content style="background-color: white;padding: 10px;display: flex;align-items: center;justify-content: center;">
+                                <Content style="background-color: white;padding: 10px;overflow: auto;max-height: 10vh">
                                     <h5>{{item.subtitle}}</h5>
                                 </Content>
                                 <Footer style="background-color: white">
@@ -39,7 +39,7 @@
                                 <Header style="background-color: white;text-align: center;">
                                     <h3>{{item.title}}</h3>
                                 </Header>
-                                <Content style="background-color: white;padding: 10px;display: flex;align-items: center;justify-content: center;">
+                                <Content style="background-color: white;padding: 10px;overflow: auto;max-height: 10vh">
                                     <h5>{{item.subtitle}}</h5>
                                 </Content>
                                 <Footer style="background-color: white">

@@ -1,5 +1,5 @@
 from django.http import HttpResponse,JsonResponse
-from .models import UrlsClass,Urls,PrivateResourcesClass,PrivateResources,About,WeChat
+from .models import UrlsClass,Urls,PrivateResourcesClass,PrivateResources,About,WeChat,Comments
 from service import settings
 import os,time
 from django.contrib.auth import authenticate,login,logout
@@ -329,3 +329,27 @@ def WeChatImage(request):
     with open(image_path,'rb') as f:
         data = f.read()
     return HttpResponse(data,content_type='image/jpg')
+
+def CommentsPush(request):
+    response = {}
+    if (request.user.is_authenticated):
+        user = User.objects.get(username=request.user)
+        content = request.POST['content']
+        data = Comments()
+        data.user = user
+        data.content = content
+        data.save()
+        response['state'] = 'success'
+    else:
+        response['state'] = 'err'
+    return JsonResponse(response)
+
+def CommentsData(request):
+    data = list(Comments.objects.order_by('-id').values())
+    for i in data:
+        user = User.objects.get(id=i['user_id']).username
+        i['user'] = user
+    response = {
+        'data':data
+    }
+    return JsonResponse(response)

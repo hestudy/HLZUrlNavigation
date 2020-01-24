@@ -24,7 +24,7 @@
                                 <Header style="background: white;">
                                     <h3>{{item.title}}</h3>
                                 </Header>
-                                <Content style="background: white;padding: 10px;">
+                                <Content style="background: white;padding: 10px;overflow: auto;max-height: 15vh">
                                     <h4>{{item.subtitle}}</h4>
                                 </Content>
                                 <Footer style="background: white;">
