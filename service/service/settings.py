@@ -113,8 +113,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',  # 或者使用 mysql.connector.django
         'NAME': 'YouDataBase', #更改为你的数据库
-        'PASSWORD': 'YouPassWord', #更改为你的数据库用户
-        'HOST':'localhost', #更改为你的数据库密码
+        'USER':'YouUser', #更改为你的数据库用户
+        'PASSWORD': 'YouPassWord', #更改为你的数据库密码
+        'HOST':'localhost',
         'PORT':'3306',
     }
 }

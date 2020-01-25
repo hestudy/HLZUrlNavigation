@@ -113,13 +113,18 @@ def changeshare(request):
         urlsid = request.POST['id']
         share = request.POST['share']
         data = PrivateResources.objects.get(id=urlsid)
-        if(len(list(PrivateResources.objects.filter(share=True,title=data.title).values()))==0):
-            data.share = bool(share)
-            data.share_date = time.strftime("%Y-%m-%d", time.localtime())
+        if (share == 'true'):
+            if (len(list(PrivateResources.objects.filter(share=True, title=data.title).values())) == 0):
+                data.share = True
+                data.share_date = time.strftime("%Y-%m-%d", time.localtime())
+                data.save()
+                response['state'] = 'success'
+            else:
+                response['state'] = 'err'
+        else:
+            data.share = False
             data.save()
             response['state'] = 'success'
-        else:
-            response['state'] = 'err'
     else:
         response['state'] = 'err'
     return JsonResponse(response)

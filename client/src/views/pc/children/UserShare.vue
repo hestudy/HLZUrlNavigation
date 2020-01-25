@@ -29,7 +29,7 @@
         </TabPane>
         <TabPane label="按时间排序" name="2">
             <div style="width: 100%;height: 80vh;max-height: 80vh;overflow: auto;display: flex;flex-wrap: wrap;align-content: flex-start;">
-                <a v-for="(item,index) in urlsdata" :key="index" style="margin: 30px;">
+                <a v-for="(item,index) in urlsdata" :key="index" style="margin: 30px;" @click="tourls(item)">
                     <div class="urls">
                         <div style="height: 100%;flex: 1;padding: 3px;display: flex;align-items: center;justify-content: center;">
                             <img :src="$store.state.serviceurl+'/'+item.image" style="width: 100%;height: auto;border-radius: 50%;">

@@ -78,9 +78,40 @@ const routes = [
   },
   {
     path: '/phone',
-    name: 'home-phone',
-    component: () => import('../views/phone/Home')
-  }
+    component: () => import('../views/phone/Home'),
+    children:[
+      {
+        path:'/',
+        name: 'home-phone',
+        component: () => import('../views/phone/children/Home')
+      },
+      {
+        path:'/PublicResources',
+        name: 'PublicResources-phone',
+        component: () => import('../views/phone/children/PublicResources')
+      },
+      {
+        path:'/UserShare',
+        name: 'UserShare-phone',
+        component: () => import('../views/phone/children/UserShare')
+      },
+      {
+        path:'/PrivateResources',
+        name: 'PrivateResources-phone',
+        component: () => import('../views/phone/children/PrivateResources')
+      },
+      {
+        path:'/About',
+        name: 'About-phone',
+        component: () => import('../views/phone/children/About')
+      }
+    ]
+  },
+    {
+        path:'/UpdatePassWord',
+        name: 'UpdatePassWord-phone',
+        component: () => import('../views/phone/UpdatePassWord')
+    }
 ]
 
 const router = new VueRouter({
