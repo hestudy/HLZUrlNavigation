@@ -86,29 +86,29 @@ const routes = [
         component: () => import('../views/phone/children/Home')
       },
       {
-        path:'/PublicResources',
+        path:'/phone/PublicResources',
         name: 'PublicResources-phone',
         component: () => import('../views/phone/children/PublicResources')
       },
       {
-        path:'/UserShare',
+        path:'/phone/UserShare',
         name: 'UserShare-phone',
         component: () => import('../views/phone/children/UserShare')
       },
       {
-        path:'/PrivateResources',
+        path:'/phone/PrivateResources',
         name: 'PrivateResources-phone',
         component: () => import('../views/phone/children/PrivateResources')
       },
       {
-        path:'/About',
+        path:'/phone/About',
         name: 'About-phone',
         component: () => import('../views/phone/children/About')
       }
     ]
   },
     {
-        path:'/UpdatePassWord',
+        path:'/phone/UpdatePassWord',
         name: 'UpdatePassWord-phone',
         component: () => import('../views/phone/UpdatePassWord')
     }
