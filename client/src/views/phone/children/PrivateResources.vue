@@ -29,7 +29,7 @@
                 </a>
             </div>
         </div>
-        <van-dialog v-model="showdialog" :title="showdata.title" show-cancel-button confirmButtonText="进入网站" @confirm="">
+        <van-dialog v-model="showdialog" :title="showdata.title" show-cancel-button confirmButtonText="进入网站" @confirm="tourls()">
             <div style="width:100%;height:50vh;display: flex;flex-direction: column;">
                 <div style="width:100%;flex:1;display: flex;align-items: center;justify-content: center;">
                     <img :src="$store.state.serviceurl+'/'+this.showdata.image" style="height: 90%;width: auto;border-radius: 50%;max-width:50vw">
@@ -122,6 +122,9 @@
             }
         },
         methods:{
+            tourls(){
+                window.open(this.showdata.href,'_blank')
+            },
             changeswitch(val){
                 let url = this.$store.state.serviceurl+'/changeshare/'
                 let postdata = {
