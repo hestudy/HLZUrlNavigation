@@ -1,5 +1,9 @@
 # 一个基于Django+Vue的网址导航系统
 
+## 成品
+
+http://hlzurlnavigation.hlovez.top/
+
 ## 使用此项目注意
 
 **确保你熟悉Vue和Django，能自己进行二次开发，因为本人未做任何便于理解和使用的封装**
